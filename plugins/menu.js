@@ -1,42 +1,18 @@
-const config = require('../config')
 const {cmd , commands} = require('../command')
-const os = require("os")
-const {runtime} = require('../lib/functions')
 
 cmd({
     pattern: "menu",
-    desc: "To get the menu.",
-    react: "📜",
+    react: "📥",
+    alias: ["panel"],
+    desc: "Get bot\'s command list.",
     category: "main",
+    use: '.menu',
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-    
-const voice = {
-    menu: 'media/AUD-20240904-WA0426.mp3'
-}
 
-let menu = {
-main: '',
-download: '',
-group: '',
-owner: '',
-convert: '',
-search: '',
-fun: '',
-voice: '',
-other: ''
-};
-
-for (let i = 0; i < commands.length; i++) {
-if (commands[i].pattern && !commands[i].dontAddCommandList) {
-menu[commands[i].category] += `.${commands[i].pattern}\n`;
- }
-}
-
-let madeMenu = ` *👋 Hello ${pushname}*
-╭═══𝐁𝐋𝐀𝐂𝐊 𝐀𝐋𝐅𝐇𝐀 𝐕-1═══─●►
+let tex = `╭═══𝐁𝐋𝐀𝐂𝐊 𝐀𝐋𝐅𝐇𝐀 𝐕-1═══─●►
 ⚚╭─────────────┈
 ⚚│ Prefix : .
 ⚚│ User :.......
@@ -46,7 +22,7 @@ let madeMenu = ` *👋 Hello ${pushname}*
 ⚚│ Ram : 235 MB/480 MB
 ⚚╰─────────────┈
   
-*👋 Hello 𝚞𝚜𝚎𝚛 𝚗𝚊𝚖𝚎....*
+*👋 Hello ${pushname}*
 
 *👨‍💻_BLACK ALFHA-V-1_MAIN_COMMAND_👨‍💻*
 
@@ -118,16 +94,13 @@ let madeMenu = ` *👋 Hello ${pushname}*
 
 > 🚀 Bot restart කිරීමට
 
-> ρσɯҽԃ Ⴆყ PD 𝚖𝚘𝚍𝚣ꪻ𝐏яανι𝚈αнꪶ🕊🍒
+> ᴘᴏᴡᴇʀᴇᴅ_ʙʏ_ʙʟᴀᴄᴋ_ᴀʟꜰʜᴀ ᴠ-1
 
-╰══════════════════─●►
-`
+╰══════════════════─●►`
 
-await conn.sendMessage(from, { audio: { url: voice.menu }, mimetype: 'audio/mp4', ptt: true }, { quoted: mek })
-
-return await conn.sendMessage(from,{image: {url: `https://i.ibb.co/tLxNF4M/Whats-App-Image-2024-09-19-at-22-07-43-53e71399.jpg`},caption:madeMenu},{quoted: mek})
+return await conn.sendMessage(from,{image: {url: https://i.ibb.co/YjdvYzc/file-Dk-CNr-FLShv-Gyty-Qux-Tr-N1x-Eo.webp},caption: tex},{quoted: mek})
 }catch(e){
 console.log(e)
-reply(`Error`)
+reply(${e})
 }
 })
