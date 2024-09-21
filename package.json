@@ -1,8 +1,7 @@
 {
   "name": "BLACK ALFHA V-1",
   "version": "1.0.0",
-  "description": "𝙼𝚄𝙻𝚃𝙸𝙳𝙴𝚅𝙸𝙲𝙴 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 𝙱𝙾𝚃 𝙲𝚁𝙴𝙰𝚃𝙴𝙳
- 𝙱𝚈  PD 𝚖𝚘𝚍𝚣ꪻ𝐏яανι𝚈αнꪶ🕊🍒",
+  "description": "A WhatsApp Bot Created By Sahas Tech",
   "main": "index.js",
   "scripts": {
     "start": "pm2 start index.js --deep-monitoring --attach --name BLACK ALFHA V-1",
