@@ -26,3 +26,22 @@ Not come session id use a vpn and try again
 
 <br>
 <br>
+## Pair Features
+
+- **Enter Phone Number**: Users can input their phone number with the country code.
+- **Get SESSION-ID**: Submit the phone number to receive a SESSION-ID.
+- **Copy Code**: Easily copy the received code to the clipboard with a click.
+- **Loading Spinner**: Visual feedback while waiting for the response.
+
+## PAIR SITE
+
+You can see the Paire Code at [PAIR CODE](https://pair-web-public.koyeb.app/).
+
+## Deployment
+
+You can deploy this application on various platforms. Here are some options:
+
+- **[Replit](https://replit.com/)**: An easy way to deploy and collaborate on code.
+- **[Heroku](https://www.heroku.com/)**: A cloud platform that lets you build, deliver, monitor, and scale apps.
+- **[Koyeb](https://www.koyeb.com/)**: A modern cloud platform to deploy and manage your applications.
+- **[Render](https://render.com/)**: Provides a simple, fast, and reliable way to deploy and manage applications.
